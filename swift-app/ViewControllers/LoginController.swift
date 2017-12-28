@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +20,21 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "showOptions" else {
+            fatalError("Unknown segue")
+        }
+        // skip navigation controller
+        let destinationNavigationController = segue.destination as! UINavigationController
+        let collectionViewController = destinationNavigationController.topViewController
+        // do stuff
+    }
 
+    @IBAction func unwindLogout(_ segue: UIStoryboardSegue) {
+        guard segue.identifier == "logout" else {
+            fatalError("Unknown segue")
+        }
+        //TODO
+    }
 }
 

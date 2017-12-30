@@ -154,7 +154,7 @@
                                     <constraint firstAttribute="bottom" secondItem="7ri-gm-qfb" secondAttribute="bottom" id="fsF-uN-hP2"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="image" destination="zOo-xT-mXx" id="sr8-5V-7Qc"/>
+                                    <outlet property="imageView" destination="zOo-xT-mXx" id="PE7-ag-CUU"/>
                                     <outlet property="itemLabel" destination="cOg-Vd-UNB" id="uAj-qF-GMv"/>
                                 </connections>
                             </collectionViewCell>

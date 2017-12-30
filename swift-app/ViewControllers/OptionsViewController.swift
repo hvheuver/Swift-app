@@ -44,12 +44,16 @@ extension OptionsViewController {
         switch indexPath.item {
         case 0:
             cell.itemLabel.text = "Statistieken"
+            cell.imageView.image = UIImage(named: "statistics")
         case 1:
             cell.itemLabel.text = "Competitie"
+            cell.imageView.image = UIImage(named: "trophy")
         case 2:
             cell.itemLabel.text = "Uitrusting"
+            cell.imageView.image = UIImage(named: "inventory")
         case 3:
             cell.itemLabel.text = "Schietingen"
+            cell.imageView.image = UIImage(named: "calendar")
         default:
             fatalError("Unknown cell")
         }

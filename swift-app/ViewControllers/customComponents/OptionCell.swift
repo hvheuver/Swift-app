@@ -9,8 +9,6 @@
 import UIKit
 
 class OptionCell: UICollectionViewCell {
-    @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var itemLabel: UILabel!
-    
-    
 }

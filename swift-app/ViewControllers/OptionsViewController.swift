@@ -46,7 +46,7 @@ extension OptionsViewController {
             cell.itemLabel.text = "Statistieken"
             cell.imageView.image = UIImage(named: "statistics")
         case 1:
-            cell.itemLabel.text = "Competitie"
+            cell.itemLabel.text = "Klassement"
             cell.imageView.image = UIImage(named: "trophy")
         case 2:
             cell.itemLabel.text = "Uitrusting"
@@ -90,19 +90,15 @@ extension OptionsViewController: UICollectionViewDelegateFlowLayout {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch indexPath.item {
         case 0:
-            print("selected cell at: \(indexPath.item)")
-            // start segue
+            performSegue(withIdentifier: "statistics", sender: self)
         case 1:
-            print("selected cell at: \(indexPath.item)")
-            //start segue
+            performSegue(withIdentifier: "leaderboard", sender: self)
         case 2:
-            print("selected cell at: \(indexPath.item)")
-            //start segue
+            performSegue(withIdentifier: "inventory", sender: self)
         case 3:
-            print("selected cell at: \(indexPath.item)")
-            //start segue
+            performSegue(withIdentifier: "calendar", sender: self)
         default:
-            print("selected cell at: \(indexPath.item)")
+            fatalError("Unknown segue")
         }
     }
 }

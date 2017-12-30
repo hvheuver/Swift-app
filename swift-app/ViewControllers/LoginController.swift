@@ -16,7 +16,6 @@ class LoginController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     @IBAction func login() {
@@ -56,6 +55,12 @@ class LoginController: UIViewController {
         guard segue.identifier == "logout" else {
             fatalError("Unknown segue")
         }
+        do {
+            try Auth.auth().signOut()
+        } catch {
+            fatalError("Signing out failed")
+        }
+        
     }
     
     func resetFields() {

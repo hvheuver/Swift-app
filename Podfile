@@ -8,4 +8,6 @@ target 'swift-app' do
   # Pods for swift-app
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  pod 'Firebase/Database'
+  pod 'Charts'
 end

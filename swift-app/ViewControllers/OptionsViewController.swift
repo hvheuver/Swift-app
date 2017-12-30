@@ -1,13 +1,7 @@
-//
-//  CollectionViewController.swift
-//  swift-app
-//
-//  Created by Hendrik Van Heuverswyn on 28/12/2017.
-//  Copyright © 2017 Hendrik Van Heuverswyn. All rights reserved.
-//
-
 import Foundation
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class OptionsViewController: UICollectionViewController {
     // for performance: use a reuseIdentifier to use a cell as "base"
@@ -16,6 +10,45 @@ class OptionsViewController: UICollectionViewController {
     fileprivate let itemsPerRow: CGFloat = 2
     fileprivate let sectionInsets = UIEdgeInsetsMake(50.0, 20.0, 50.0, 20.0)
     
+    var ref: DatabaseReference!
+    var calendarItems: [CalendarItem]!
+    
+    override func viewDidLoad() {
+        ref = Database.database().reference()
+        calendarItems = []
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "calendar"?:
+            prepareCalendar(segue, sender)
+        case "leaderboard"?:
+            break
+        case "inventory"?:
+            break
+        case "statistics"?:
+            break
+        case "logout"?:
+            break
+        default:
+            fatalError("Unknown segue")
+        }
+    }
+    
+    func prepareCalendar(_ segue: UIStoryboardSegue, _ sender: Any?) {
+        let calendarTableView = segue.destination as! CalendarTableViewController
+        ref.child("calendar").observe(DataEventType.value, with: { (snapshot) in
+            let dict = snapshot.value as? NSDictionary
+            for (key, value) in dict! {
+                let calendarItem = CalendarItem(date: key as! String, event: value as! String)
+                self.calendarItems.append(calendarItem)
+            }
+            calendarTableView.items = self.calendarItems.sorted(by: { ($0.dateObj).compare($1.dateObj) == .orderedAscending })
+            calendarTableView.tableView.reloadData()
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+    }
 }
 
 extension OptionsViewController {

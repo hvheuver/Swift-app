@@ -4,6 +4,14 @@ import Firebase
 import FirebaseDatabase
 
 class OptionsViewController: UICollectionViewController {
+    /**
+     Used the following website to learn how UICollectionView works:
+     https://www.raywenderlich.com/136159/uicollectionview-tutorial-getting-started
+     Implemented my own version for what I wanted in my app.
+     
+     Also using a Firebase Realtime Database:
+     https://firebase.google.com/docs/database/
+    */
     // for performance: use a reuseIdentifier to use a cell as "base"
     fileprivate let reuseIdentifier = "optionCell"
     fileprivate let items: Int = 4

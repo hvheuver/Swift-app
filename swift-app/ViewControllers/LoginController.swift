@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  swift-app
-//
-//  Created by Hendrik Van Heuverswyn on 25/12/2017.
-//  Copyright © 2017 Hendrik Van Heuverswyn. All rights reserved.
-//
-
 import UIKit
 import Firebase
 
@@ -22,6 +14,9 @@ class LoginController: UIViewController {
         //TODO remove hardcoded entry
         emailTextField.text = "a@figlon.com"
         passwordTextField.text = "testerino"
+        // Using firebase authentication
+        // Source: https://firebase.google.com/docs/auth/
+        
         if let email = emailTextField.text, let password = passwordTextField.text {
             if ( email.isEmpty || password.isEmpty ) {
                 errorLabel.text = "Vul alle velden in"
@@ -45,10 +40,6 @@ class LoginController: UIViewController {
         guard segue.identifier == "showOptions" else {
             fatalError("Unknown segue")
         }
-        // skip navigation controller
-        let destinationNavigationController = segue.destination as! UINavigationController
-        let collectionViewController = destinationNavigationController.topViewController
-        // do stuff
     }
 
     @IBAction func unwindLogout(_ segue: UIStoryboardSegue) {

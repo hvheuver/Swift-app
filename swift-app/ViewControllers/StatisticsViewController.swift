@@ -2,8 +2,11 @@ import UIKit
 
 import Firebase
 import Charts
-// Tutorial https://github.com/annalizhaz/ChartsForSwiftBasic
-
+/**
+ Used this tutorial to get to know the Charts pod.
+ https://github.com/annalizhaz/ChartsForSwiftBasic
+ Tried to get an as nice looking chart as possible, lack of documentation.
+*/
 class StatisticsViewController: UIViewController {
     @IBOutlet weak var barChart: BarChartView!
     

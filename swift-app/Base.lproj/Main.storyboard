@@ -232,6 +232,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <label key="tableFooterView" hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Errorlabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mjk-yf-KQA">
+                            <rect key="frame" x="0.0" y="417.5" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.78187070209999998" green="0.092763635100000005" blue="0.1009799253" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <sections>
                             <tableViewSection headerTitle="Hoogvogels" id="LBe-De-fLY">
                                 <cells>
@@ -243,16 +250,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="hoogvogels" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x5F-tm-8XQ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                    <rect key="frame" x="20" y="0.0" width="355" height="43.5"/>
                                                     <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="x5F-tm-8XQ" secondAttribute="trailing" id="60z-ts-x4m"/>
                                                 <constraint firstItem="x5F-tm-8XQ" firstAttribute="top" secondItem="oEI-MP-adh" secondAttribute="top" id="6ef-bg-0Ae"/>
-                                                <constraint firstItem="x5F-tm-8XQ" firstAttribute="leading" secondItem="oEI-MP-adh" secondAttribute="leading" id="E8S-Vq-2KA"/>
+                                                <constraint firstItem="x5F-tm-8XQ" firstAttribute="leading" secondItem="oEI-MP-adh" secondAttribute="leading" constant="20" id="E8S-Vq-2KA"/>
                                                 <constraint firstAttribute="bottom" secondItem="x5F-tm-8XQ" secondAttribute="bottom" id="nsM-oP-AdZ"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -269,14 +276,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="zijvogels" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Ya-Fh-ZHV" userLabel="zijvogels">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                    <rect key="frame" x="20" y="0.0" width="355" height="43.5"/>
                                                     <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="4Ya-Fh-ZHV" firstAttribute="leading" secondItem="jRr-bn-J0N" secondAttribute="leading" id="4fg-wO-YRo"/>
+                                                <constraint firstItem="4Ya-Fh-ZHV" firstAttribute="leading" secondItem="jRr-bn-J0N" secondAttribute="leading" constant="20" id="4fg-wO-YRo"/>
                                                 <constraint firstAttribute="bottom" secondItem="4Ya-Fh-ZHV" secondAttribute="bottom" id="S4I-G9-QRy"/>
                                                 <constraint firstItem="4Ya-Fh-ZHV" firstAttribute="top" secondItem="jRr-bn-J0N" secondAttribute="top" id="UTP-9s-CoB"/>
                                                 <constraint firstAttribute="trailing" secondItem="4Ya-Fh-ZHV" secondAttribute="trailing" id="jL6-dN-pYZ"/>
@@ -295,15 +302,15 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="kalle vogels" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jmz-SN-meo" userLabel="kalle vogels">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                    <rect key="frame" x="20" y="0.0" width="355" height="43.5"/>
                                                     <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="jmz-SN-meo" secondAttribute="trailing" id="PL1-hT-MCK"/>
-                                                <constraint firstItem="jmz-SN-meo" firstAttribute="leading" secondItem="rEl-TS-HVy" secondAttribute="leading" id="Uuj-9N-owO"/>
+                                                <constraint firstItem="jmz-SN-meo" firstAttribute="leading" secondItem="rEl-TS-HVy" secondAttribute="leading" constant="20" id="Uuj-9N-owO"/>
                                                 <constraint firstItem="jmz-SN-meo" firstAttribute="top" secondItem="rEl-TS-HVy" secondAttribute="top" id="ZCB-9j-II7"/>
                                                 <constraint firstAttribute="bottom" secondItem="jmz-SN-meo" secondAttribute="bottom" id="tyC-P2-fjz"/>
                                             </constraints>
@@ -321,15 +328,15 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="kleine vogels" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8qc-hP-KUn" userLabel="kleine vogels">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                    <rect key="frame" x="20" y="0.0" width="355" height="43.5"/>
                                                     <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="8qc-hP-KUn" secondAttribute="trailing" id="IhM-8J-E6S"/>
-                                                <constraint firstItem="8qc-hP-KUn" firstAttribute="leading" secondItem="z5Q-rl-GMg" secondAttribute="leading" id="MQC-4c-OX7"/>
+                                                <constraint firstItem="8qc-hP-KUn" firstAttribute="leading" secondItem="z5Q-rl-GMg" secondAttribute="leading" constant="20" id="MQC-4c-OX7"/>
                                                 <constraint firstAttribute="bottom" secondItem="8qc-hP-KUn" secondAttribute="bottom" id="gg7-Jt-2SJ"/>
                                                 <constraint firstItem="8qc-hP-KUn" firstAttribute="top" secondItem="z5Q-rl-GMg" secondAttribute="top" id="mv7-X2-VX2"/>
                                             </constraints>
@@ -351,6 +358,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="errorLabel" destination="Mjk-yf-KQA" id="pxC-VQ-x39"/>
                         <outlet property="hoogvogels" destination="x5F-tm-8XQ" id="tXR-tj-sSL"/>
                         <outlet property="kalleVogels" destination="jmz-SN-meo" id="JAH-ud-K6u"/>
                         <outlet property="kleineVogels" destination="8qc-hP-KUn" id="Gxt-1i-KQI"/>

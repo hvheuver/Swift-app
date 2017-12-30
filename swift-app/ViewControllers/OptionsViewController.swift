@@ -36,18 +36,20 @@ class OptionsViewController: UICollectionViewController {
     }
     
     func prepareCalendar(_ segue: UIStoryboardSegue, _ sender: Any?) {
+        //requests most recent data from the db
         let calendarTableView = segue.destination as! CalendarTableViewController
-        ref.child("calendar").observe(DataEventType.value, with: { (snapshot) in
-            let dict = snapshot.value as? NSDictionary
-            for (key, value) in dict! {
-                let calendarItem = CalendarItem(date: key as! String, event: value as! String)
-                self.calendarItems.append(calendarItem)
+            ref.child("calendar").observe(DataEventType.value, with: { (snapshot) in
+                let dict = snapshot.value as? NSDictionary
+                for (key, value) in dict! {
+                    let calendarItem = CalendarItem(date: key as! String, event: value as! String)
+                    self.calendarItems.append(calendarItem)
+                }
+                calendarTableView.items = self.calendarItems.sorted(by: { ($0.dateObj).compare($1.dateObj) == .orderedAscending })
+                calendarTableView.tableView.reloadData()
+                self.calendarItems.removeAll()
+            }) { (error) in
+                print(error.localizedDescription)
             }
-            calendarTableView.items = self.calendarItems.sorted(by: { ($0.dateObj).compare($1.dateObj) == .orderedAscending })
-            calendarTableView.tableView.reloadData()
-        }) { (error) in
-            print(error.localizedDescription)
-        }
     }
 }
 

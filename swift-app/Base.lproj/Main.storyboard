@@ -212,7 +212,7 @@
                     <navigationItem key="navigationItem" title="Statistieken" id="cZD-EL-k5j">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="JuM-hk-853">
                             <connections>
-                                <segue destination="byF-aB-nrn" kind="show" identifier="addStatistic" id="t9w-CW-ECj"/>
+                                <segue destination="ONl-Ls-ftW" kind="show" identifier="addData" id="hlS-hR-XTY"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -223,6 +223,143 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y7b-N8-a0l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3375" y="28"/>
+        </scene>
+        <!--Voeg data toe-->
+        <scene sceneID="Cwl-Y5-aMC">
+            <objects>
+                <tableViewController id="ONl-Ls-ftW" customClass="AddDataTableViewController" customModule="swift_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" sectionIndexMinimumDisplayRowCount="1" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="C7k-Jj-lsO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Hoogvogels" id="LBe-De-fLY">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="hrJ-oz-qXT">
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hrJ-oz-qXT" id="oEI-MP-adh">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="hoogvogels" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x5F-tm-8XQ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="x5F-tm-8XQ" secondAttribute="trailing" id="60z-ts-x4m"/>
+                                                <constraint firstItem="x5F-tm-8XQ" firstAttribute="top" secondItem="oEI-MP-adh" secondAttribute="top" id="6ef-bg-0Ae"/>
+                                                <constraint firstItem="x5F-tm-8XQ" firstAttribute="leading" secondItem="oEI-MP-adh" secondAttribute="leading" id="E8S-Vq-2KA"/>
+                                                <constraint firstAttribute="bottom" secondItem="x5F-tm-8XQ" secondAttribute="bottom" id="nsM-oP-AdZ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Zijvogels" id="b7D-PP-GXe" userLabel="Zijvogels">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Pvn-F0-qGc">
+                                        <rect key="frame" x="0.0" y="155.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Pvn-F0-qGc" id="jRr-bn-J0N">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="zijvogels" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Ya-Fh-ZHV" userLabel="zijvogels">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="4Ya-Fh-ZHV" firstAttribute="leading" secondItem="jRr-bn-J0N" secondAttribute="leading" id="4fg-wO-YRo"/>
+                                                <constraint firstAttribute="bottom" secondItem="4Ya-Fh-ZHV" secondAttribute="bottom" id="S4I-G9-QRy"/>
+                                                <constraint firstItem="4Ya-Fh-ZHV" firstAttribute="top" secondItem="jRr-bn-J0N" secondAttribute="top" id="UTP-9s-CoB"/>
+                                                <constraint firstAttribute="trailing" secondItem="4Ya-Fh-ZHV" secondAttribute="trailing" id="jL6-dN-pYZ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Kalle vogels" id="LFL-xZ-Hzq" userLabel="Kallevogels">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ygN-Kf-JGi">
+                                        <rect key="frame" x="0.0" y="255.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ygN-Kf-JGi" id="rEl-TS-HVy">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="kalle vogels" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jmz-SN-meo" userLabel="kalle vogels">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="jmz-SN-meo" secondAttribute="trailing" id="PL1-hT-MCK"/>
+                                                <constraint firstItem="jmz-SN-meo" firstAttribute="leading" secondItem="rEl-TS-HVy" secondAttribute="leading" id="Uuj-9N-owO"/>
+                                                <constraint firstItem="jmz-SN-meo" firstAttribute="top" secondItem="rEl-TS-HVy" secondAttribute="top" id="ZCB-9j-II7"/>
+                                                <constraint firstAttribute="bottom" secondItem="jmz-SN-meo" secondAttribute="bottom" id="tyC-P2-fjz"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Kleine vogels" id="LNz-dN-chS" userLabel="Kleine vogels">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Atv-fz-8DG">
+                                        <rect key="frame" x="0.0" y="355.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Atv-fz-8DG" id="z5Q-rl-GMg">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="kleine vogels" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8qc-hP-KUn" userLabel="kleine vogels">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="8qc-hP-KUn" secondAttribute="trailing" id="IhM-8J-E6S"/>
+                                                <constraint firstItem="8qc-hP-KUn" firstAttribute="leading" secondItem="z5Q-rl-GMg" secondAttribute="leading" id="MQC-4c-OX7"/>
+                                                <constraint firstAttribute="bottom" secondItem="8qc-hP-KUn" secondAttribute="bottom" id="gg7-Jt-2SJ"/>
+                                                <constraint firstItem="8qc-hP-KUn" firstAttribute="top" secondItem="z5Q-rl-GMg" secondAttribute="top" id="mv7-X2-VX2"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="ONl-Ls-ftW" id="2PC-4G-BUX"/>
+                            <outlet property="delegate" destination="ONl-Ls-ftW" id="LEc-Km-Xbh"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Voeg data toe" id="pVy-3N-2WL">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Opslaan" id="hMe-St-CD9">
+                            <connections>
+                                <action selector="save" destination="ONl-Ls-ftW" id="zgu-JO-fpS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="hoogvogels" destination="x5F-tm-8XQ" id="tXR-tj-sSL"/>
+                        <outlet property="kalleVogels" destination="jmz-SN-meo" id="JAH-ud-K6u"/>
+                        <outlet property="kleineVogels" destination="8qc-hP-KUn" id="Gxt-1i-KQI"/>
+                        <outlet property="zijvogels" destination="4Ya-Fh-ZHV" id="asR-Ch-HtH"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qFw-cW-52L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4434" y="30"/>
         </scene>
         <!--Uitrusting-->
         <scene sceneID="4pM-rI-WKt">
@@ -339,22 +476,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t2f-Tl-en6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3289" y="844"/>
-        </scene>
-        <!--Voeg data toe-->
-        <scene sceneID="crE-G3-y3v">
-            <objects>
-                <viewController id="byF-aB-nrn" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="LSI-08-Dyc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="4gg-8m-AVX"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Voeg data toe" id="90z-gX-qWE"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TA5-sA-sEW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4342" y="27"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="i2o-3H-qOV">

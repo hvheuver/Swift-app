@@ -14,6 +14,7 @@
 		1207DB701FF7CB550099DC8F /* CalendarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1207DB6F1FF7CB550099DC8F /* CalendarTableViewController.swift */; };
 		1207DB721FF7DBD00099DC8F /* CalendarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1207DB711FF7DBD00099DC8F /* CalendarItem.swift */; };
 		1207DB741FF7F8EA0099DC8F /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1207DB731FF7F8EA0099DC8F /* CalendarCell.swift */; };
+		1207DB761FF813C40099DC8F /* AddDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1207DB751FF813C40099DC8F /* AddDataTableViewController.swift */; };
 		1240FDC71FF15A8400986612 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1240FDC61FF15A8400986612 /* AppDelegate.swift */; };
 		1240FDC91FF15A8400986612 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1240FDC81FF15A8400986612 /* LoginController.swift */; };
 		1240FDCC1FF15A8400986612 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1240FDCA1FF15A8400986612 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 		1207DB6F1FF7CB550099DC8F /* CalendarTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTableViewController.swift; sourceTree = "<group>"; };
 		1207DB711FF7DBD00099DC8F /* CalendarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarItem.swift; sourceTree = "<group>"; };
 		1207DB731FF7F8EA0099DC8F /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
+		1207DB751FF813C40099DC8F /* AddDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDataTableViewController.swift; sourceTree = "<group>"; };
 		1240FDC31FF15A8400986612 /* swift-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1240FDC61FF15A8400986612 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1240FDC81FF15A8400986612 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				1207DB631FF59B240099DC8F /* OptionsViewController.swift */,
 				1207DB6D1FF730DB0099DC8F /* StatisticsViewController.swift */,
 				1207DB6F1FF7CB550099DC8F /* CalendarTableViewController.swift */,
+				1207DB751FF813C40099DC8F /* AddDataTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				1240FDC91FF15A8400986612 /* LoginController.swift in Sources */,
 				1240FDC71FF15A8400986612 /* AppDelegate.swift in Sources */,
 				1207DB721FF7DBD00099DC8F /* CalendarItem.swift in Sources */,
+				1207DB761FF813C40099DC8F /* AddDataTableViewController.swift in Sources */,
 				1207DB701FF7CB550099DC8F /* CalendarTableViewController.swift in Sources */,
 				1207DB741FF7F8EA0099DC8F /* CalendarCell.swift in Sources */,
 			);

@@ -47,6 +47,7 @@ class AddDataTableViewController: UITableViewController {
                         "kalleVogels": kv,
                         "kleineVogels": klv
                         ])
+                performSegue(withIdentifier: "didAddData", sender: self)
             }
         }
     }

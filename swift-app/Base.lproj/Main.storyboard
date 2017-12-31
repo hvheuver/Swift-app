@@ -354,6 +354,7 @@
                         <barButtonItem key="rightBarButtonItem" enabled="NO" title="Opslaan" id="hMe-St-CD9">
                             <connections>
                                 <action selector="save" destination="ONl-Ls-ftW" id="zgu-JO-fpS"/>
+                                <segue destination="4j5-xW-yvn" kind="unwind" identifier="didAddData" unwindAction="unwindFromAddData:" id="PsN-De-GRT"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -367,6 +368,7 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qFw-cW-52L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="4j5-xW-yvn" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4434" y="30"/>
         </scene>

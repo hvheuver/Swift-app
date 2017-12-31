@@ -37,4 +37,10 @@ class StatisticsViewController: UIViewController {
         yAxis.drawGridLinesEnabled = false
         
     }
+    
+    @IBAction func unwindFromAddData(_ segue: UIStoryboardSegue) {
+        guard segue.identifier == "didAddData" else {
+            fatalError("Unknown segue")
+        }
+    }
 }

@@ -362,6 +362,7 @@
                         <outlet property="hoogvogels" destination="x5F-tm-8XQ" id="tXR-tj-sSL"/>
                         <outlet property="kalleVogels" destination="jmz-SN-meo" id="JAH-ud-K6u"/>
                         <outlet property="kleineVogels" destination="8qc-hP-KUn" id="Gxt-1i-KQI"/>
+                        <outlet property="saveButton" destination="hMe-St-CD9" id="2lo-32-U3o"/>
                         <outlet property="zijvogels" destination="4Ya-Fh-ZHV" id="asR-Ch-HtH"/>
                     </connections>
                 </tableViewController>

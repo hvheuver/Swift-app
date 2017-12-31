@@ -20,6 +20,7 @@
 		1240FDCC1FF15A8400986612 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1240FDCA1FF15A8400986612 /* Main.storyboard */; };
 		1240FDCE1FF15A8400986612 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1240FDCD1FF15A8400986612 /* Assets.xcassets */; };
 		1240FDD11FF15A8400986612 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1240FDCF1FF15A8400986612 /* LaunchScreen.storyboard */; };
+		12A05FC41FF84F2A00DA9207 /* DataEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A05FC31FF84F2A00DA9207 /* DataEntry.swift */; };
 		B312BB3F6AF29CBEADE0B458 /* Pods_swift_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C30912646C2DD83DA607952B /* Pods_swift_app.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		1240FDCD1FF15A8400986612 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1240FDD01FF15A8400986612 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1240FDD21FF15A8400986612 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12A05FC31FF84F2A00DA9207 /* DataEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataEntry.swift; sourceTree = "<group>"; };
 		8EA81E5C5B980EC3C026F0E4 /* Pods-swift-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-swift-app/Pods-swift-app.release.xcconfig"; sourceTree = "<group>"; };
 		B076E7A56F73C808095F6751 /* Pods-swift-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swift-app/Pods-swift-app.debug.xcconfig"; sourceTree = "<group>"; };
 		C30912646C2DD83DA607952B /* Pods_swift_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swift_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				1207DB711FF7DBD00099DC8F /* CalendarItem.swift */,
+				12A05FC31FF84F2A00DA9207 /* DataEntry.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				1240FDC91FF15A8400986612 /* LoginController.swift in Sources */,
 				1240FDC71FF15A8400986612 /* AppDelegate.swift in Sources */,
 				1207DB721FF7DBD00099DC8F /* CalendarItem.swift in Sources */,
+				12A05FC41FF84F2A00DA9207 /* DataEntry.swift in Sources */,
 				1207DB761FF813C40099DC8F /* AddDataTableViewController.swift in Sources */,
 				1207DB701FF7CB550099DC8F /* CalendarTableViewController.swift in Sources */,
 				1207DB741FF7F8EA0099DC8F /* CalendarCell.swift in Sources */,

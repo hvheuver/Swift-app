@@ -10,25 +10,22 @@ import FirebaseDatabase
 */
 class StatisticsViewController: UIViewController {
     @IBOutlet weak var barChart: BarChartView!
-    var statistic: Statistic!
+    var statistic: Statistic?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        statistic = Statistic()
-        //initGraph()
         barChartSetup()
-        barChartUpdate()
+        if statistic != nil {
+            // Viewcontroller is slower
+            barChartUpdate()
+        }
     }
     
     func barChartUpdate () {
-        let entry1 = BarChartDataEntry(x: 1.0, y: Double(50.0))
-        let entry2 = BarChartDataEntry(x: 2.0, y: Double(50.0))
-        let entry3 = BarChartDataEntry(x: 3.0, y: Double(50.0))
-        let dataSet = BarChartDataSet(values: [entry1, entry2, entry3], label: "Aantal vogels")
+        let dataSet = BarChartDataSet(values: statistic!.barChartEntries, label: "Aantal vogels")
         dataSet.colors = ChartColorTemplates.pastel()
         let data = BarChartData(dataSets: [dataSet])
         barChart.data = data
-        
         barChart.notifyDataSetChanged()
     }
     
@@ -39,7 +36,10 @@ class StatisticsViewController: UIViewController {
         xAxis.drawGridLinesEnabled = false
         yAxis.drawAxisLineEnabled = false
         yAxis.drawGridLinesEnabled = false
-        
+        barChart.chartDescription?.text = ""
+        let birds = ["", "HV", "ZV", "KV", "KLV"]
+        barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values: birds)
+        barChart.xAxis.granularity = 1
     }
     
     @IBAction func unwindFromAddData(_ segue: UIStoryboardSegue) {
@@ -56,7 +56,12 @@ class StatisticsViewController: UIViewController {
         
         ref.child("statistics").child(userid!).observe(DataEventType.value, with: { (snapshot) in
             let dict = snapshot.value as? NSDictionary
-            Deserializer.deserializeStatistic(dict: dict!)
+            self.statistic = Deserializer.deserializeStatistic(dict: dict!)
+            self.statistic!.finalize()
+            if self.barChart != nil {
+                // async is slow than viewDidLoad
+                self.barChartUpdate()
+            }
         }) { (error) in
             print(error.localizedDescription)
         }

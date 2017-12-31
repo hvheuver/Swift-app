@@ -354,7 +354,6 @@
                         <barButtonItem key="rightBarButtonItem" enabled="NO" title="Opslaan" id="hMe-St-CD9">
                             <connections>
                                 <action selector="save" destination="ONl-Ls-ftW" id="zgu-JO-fpS"/>
-                                <segue destination="4j5-xW-yvn" kind="unwind" identifier="didAddData" unwindAction="unwindFromAddData:" id="PsN-De-GRT"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -365,6 +364,7 @@
                         <outlet property="kleineVogels" destination="8qc-hP-KUn" id="Gxt-1i-KQI"/>
                         <outlet property="saveButton" destination="hMe-St-CD9" id="2lo-32-U3o"/>
                         <outlet property="zijvogels" destination="4Ya-Fh-ZHV" id="asR-Ch-HtH"/>
+                        <segue destination="4j5-xW-yvn" kind="unwind" identifier="didAddData" unwindAction="unwindFromAddData:" id="4Ei-0z-r1U"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qFw-cW-52L" userLabel="First Responder" sceneMemberID="firstResponder"/>

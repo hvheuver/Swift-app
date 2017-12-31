@@ -35,7 +35,7 @@ class OptionsViewController: UICollectionViewController {
         case "inventory"?:
             break
         case "statistics"?:
-            break
+            prepareStatistics(segue, sender)
         case "logout"?:
             break
         default:
@@ -48,16 +48,20 @@ class OptionsViewController: UICollectionViewController {
         let calendarTableView = segue.destination as! CalendarTableViewController
             ref.child("calendar").observe(DataEventType.value, with: { (snapshot) in
                 let dict = snapshot.value as? NSDictionary
-                for (key, value) in dict! {
-                    let calendarItem = CalendarItem(date: key as! String, event: value as! String)
-                    self.calendarItems.append(calendarItem)
-                }
+                // use Util class to handle all conversions
+                self.calendarItems = Deserializer.deserializeCalendarItems(dict: dict!)
+                
                 calendarTableView.items = self.calendarItems.sorted(by: { ($0.dateObj).compare($1.dateObj) == .orderedAscending })
                 calendarTableView.tableView.reloadData()
                 self.calendarItems.removeAll()
             }) { (error) in
                 print(error.localizedDescription)
             }
+    }
+    
+    func prepareStatistics(_ segue: UIStoryboardSegue, _ sender:Any?){
+        let statisticsViewController = segue.destination as! StatisticsViewController
+        statisticsViewController.initGraph(ref: ref)
     }
 }
 

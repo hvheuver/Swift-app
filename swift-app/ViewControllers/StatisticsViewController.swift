@@ -2,6 +2,7 @@ import UIKit
 
 import Firebase
 import Charts
+import FirebaseDatabase
 /**
  Used this tutorial to get to know the Charts pod.
  https://github.com/annalizhaz/ChartsForSwiftBasic
@@ -9,9 +10,12 @@ import Charts
 */
 class StatisticsViewController: UIViewController {
     @IBOutlet weak var barChart: BarChartView!
+    var statistic: Statistic!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        statistic = Statistic()
+        //initGraph()
         barChartSetup()
         barChartUpdate()
     }
@@ -41,6 +45,20 @@ class StatisticsViewController: UIViewController {
     @IBAction func unwindFromAddData(_ segue: UIStoryboardSegue) {
         guard segue.identifier == "didAddData" else {
             fatalError("Unknown segue")
+        }
+        //reload statistics
+        initGraph(ref: Database.database().reference())
+    }
+    
+    func initGraph(ref: DatabaseReference){
+        // get remote data
+        let userid = Auth.auth().currentUser?.uid
+        
+        ref.child("statistics").child(userid!).observe(DataEventType.value, with: { (snapshot) in
+            let dict = snapshot.value as? NSDictionary
+            Deserializer.deserializeStatistic(dict: dict!)
+        }) { (error) in
+            print(error.localizedDescription)
         }
     }
 }

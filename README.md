@@ -7,6 +7,10 @@ Willem Tell is een boogschuttersclub. Ik heb de inspiratie daar gehaald. Een sch
 
 Er is ook nog een optie om de uitrusting te bekijken. De intentie was om hier een "stockbeheer" te implementeren voor de schutter. (Hoeveel volledige pijlen, veren, pijlpunten ...)
 Helaas werd deze optie niet verder uitgewerkt.
+## Gebruik repository
+Code (inclusief pods) werden opgenomen in de repository. Het volstaat om de repository te clonen.
+
+Na het clonen gebruikt u het `swift-app.xcworkspace` bestand om het project te openen. Vervolgens kan u het project builden en runnen.
 
 ## Functionaliteit
 ### Login

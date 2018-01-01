@@ -31,8 +31,9 @@ class OptionsViewController: UICollectionViewController {
         case "calendar"?:
             prepareCalendar(segue, sender)
         case "leaderboard"?:
-            break
+            prepareLeaderboard(segue, sender)
         case "inventory"?:
+            // not implemented
             break
         case "statistics"?:
             prepareStatistics(segue, sender)
@@ -62,6 +63,25 @@ class OptionsViewController: UICollectionViewController {
     func prepareStatistics(_ segue: UIStoryboardSegue, _ sender:Any?){
         let statisticsViewController = segue.destination as! StatisticsViewController
         statisticsViewController.initGraph(ref: ref)
+    }
+    
+    func prepareLeaderboard(_ segue: UIStoryboardSegue, _ sender: Any?) {
+        let leaderboardTableView = segue.destination as! LeaderboardTableViewController
+        var leaderboard = [String: Statistic]()
+        // get all statistics for each uid
+        ref.child("statistics").observe(DataEventType.value, with: { (snapshot) in
+            // dict of uids and statistics
+            let dict = snapshot.value as! NSDictionary
+            for (_, statisticData) in dict {
+                let statistic = Deserializer.deserializeStatistic(dict: (statisticData as! NSDictionary))
+                statistic.finalize()
+                // get the email of the user, username not supported yet
+                let email = Auth.auth().currentUser!.email!
+                leaderboard[email] = statistic
+            }
+        }) { (error) in
+            print(error.localizedDescription)
+        }
     }
 }
 

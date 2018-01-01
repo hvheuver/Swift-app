@@ -4,7 +4,7 @@ import Charts
 class Statistic{
     var dataEntries: [DataEntry]
     var barChartEntries: [BarChartDataEntry]
-    var sumHv = 0, sumZv = 0, sumKv = 0, sumKlv = 0
+    var sumHv = 0, sumZv = 0, sumKv = 0, sumKlv = 0, score = 0
     
     init() {
         dataEntries = []
@@ -23,12 +23,11 @@ class Statistic{
             sumKv += entry.kalleVogels
             sumKlv += entry.kleineVogels
         }
-        
+        score = (sumHv*4) + (sumZv*3) + (sumKv*2) + sumKlv
         let entryHv = BarChartDataEntry(x: 1.0, y: Double(sumHv))
         let entryZv = BarChartDataEntry(x: 2.0, y: Double(sumZv))
         let entryKv = BarChartDataEntry(x: 3.0, y: Double(sumKv))
         let entryKlv = BarChartDataEntry(x: 4.0, y: Double(sumKlv))
         barChartEntries.append(contentsOf: [entryHv, entryZv, entryKv, entryKlv])
-        
     }
 }

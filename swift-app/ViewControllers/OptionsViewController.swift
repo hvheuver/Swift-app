@@ -20,10 +20,12 @@ class OptionsViewController: UICollectionViewController {
     
     var ref: DatabaseReference!
     var calendarItems: [CalendarItem]!
+    var leaderboard: [Statistic]!
     
     override func viewDidLoad() {
         ref = Database.database().reference()
         calendarItems = []
+        leaderboard = []
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -67,18 +69,25 @@ class OptionsViewController: UICollectionViewController {
     
     func prepareLeaderboard(_ segue: UIStoryboardSegue, _ sender: Any?) {
         let leaderboardTableView = segue.destination as! LeaderboardTableViewController
-        var leaderboard = [String: Statistic]()
         // get all statistics for each uid
         ref.child("statistics").observe(DataEventType.value, with: { (snapshot) in
             // dict of uids and statistics
-            let dict = snapshot.value as! NSDictionary
+            guard let dict = snapshot.value as? NSDictionary else {
+                return
+            }
             for (_, statisticData) in dict {
                 let statistic = Deserializer.deserializeStatistic(dict: (statisticData as! NSDictionary))
                 statistic.finalize()
                 // get the email of the user, username not supported yet
                 let email = Auth.auth().currentUser!.email!
-                leaderboard[email] = statistic
+                statistic.owner = email
+                self.leaderboard.append(statistic)
             }
+            // got all statistics, time to sort
+            self.leaderboard.sort(by: { $0.score > $1.score })
+            leaderboardTableView.items = self.leaderboard
+            leaderboardTableView.tableView.reloadData()
+            self.leaderboard.removeAll()
         }) { (error) in
             print(error.localizedDescription)
         }

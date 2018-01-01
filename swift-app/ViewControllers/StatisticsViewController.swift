@@ -63,10 +63,11 @@ class StatisticsViewController: UIViewController {
     func initGraph(ref: DatabaseReference){
         // get remote data
         let userid = Auth.auth().currentUser?.uid
-        
         ref.child("statistics").child(userid!).observe(DataEventType.value, with: { (snapshot) in
-            let dict = snapshot.value as? NSDictionary
-            self.statistic = Deserializer.deserializeStatistic(dict: dict!)
+            guard let dict = snapshot.value as? NSDictionary else{
+                return
+            }
+            self.statistic = Deserializer.deserializeStatistic(dict: dict)
             self.statistic!.finalize()
             if self.barChart != nil {
                 // async is slow than viewDidLoad
@@ -75,5 +76,6 @@ class StatisticsViewController: UIViewController {
         }) { (error) in
             print(error.localizedDescription)
         }
+        
     }
 }

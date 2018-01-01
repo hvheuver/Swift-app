@@ -24,6 +24,7 @@
 		12A05FC71FF9248A00DA9207 /* Deserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A05FC61FF9248A00DA9207 /* Deserializer.swift */; };
 		12A05FC91FF927A800DA9207 /* Statistic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A05FC81FF927A800DA9207 /* Statistic.swift */; };
 		12A05FCB1FFA81AC00DA9207 /* LeaderboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A05FCA1FFA81AC00DA9207 /* LeaderboardTableViewController.swift */; };
+		12A05FCF1FFA934C00DA9207 /* LeaderboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A05FCE1FFA934C00DA9207 /* LeaderboardCell.swift */; };
 		B312BB3F6AF29CBEADE0B458 /* Pods_swift_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C30912646C2DD83DA607952B /* Pods_swift_app.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		12A05FC61FF9248A00DA9207 /* Deserializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deserializer.swift; sourceTree = "<group>"; };
 		12A05FC81FF927A800DA9207 /* Statistic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistic.swift; sourceTree = "<group>"; };
 		12A05FCA1FFA81AC00DA9207 /* LeaderboardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardTableViewController.swift; sourceTree = "<group>"; };
+		12A05FCE1FFA934C00DA9207 /* LeaderboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardCell.swift; sourceTree = "<group>"; };
 		8EA81E5C5B980EC3C026F0E4 /* Pods-swift-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-swift-app/Pods-swift-app.release.xcconfig"; sourceTree = "<group>"; };
 		B076E7A56F73C808095F6751 /* Pods-swift-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swift-app/Pods-swift-app.debug.xcconfig"; sourceTree = "<group>"; };
 		C30912646C2DD83DA607952B /* Pods_swift_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swift_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +85,7 @@
 			children = (
 				1207DB691FF718650099DC8F /* OptionCell.swift */,
 				1207DB731FF7F8EA0099DC8F /* CalendarCell.swift */,
+				12A05FCE1FFA934C00DA9207 /* LeaderboardCell.swift */,
 			);
 			path = customComponents;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				1207DB6E1FF730DB0099DC8F /* StatisticsViewController.swift in Sources */,
 				1207DB641FF59B240099DC8F /* OptionsViewController.swift in Sources */,
 				1240FDC91FF15A8400986612 /* LoginController.swift in Sources */,
+				12A05FCF1FFA934C00DA9207 /* LeaderboardCell.swift in Sources */,
 				1240FDC71FF15A8400986612 /* AppDelegate.swift in Sources */,
 				12A05FCB1FFA81AC00DA9207 /* LeaderboardTableViewController.swift in Sources */,
 				12A05FC91FF927A800DA9207 /* Statistic.swift in Sources */,

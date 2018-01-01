@@ -5,6 +5,7 @@ class Statistic{
     var dataEntries: [DataEntry]
     var barChartEntries: [BarChartDataEntry]
     var sumHv = 0, sumZv = 0, sumKv = 0, sumKlv = 0, score = 0
+    var owner = ""
     
     init() {
         dataEntries = []

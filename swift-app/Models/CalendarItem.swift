@@ -6,6 +6,7 @@ class CalendarItem {
     var event: String
     
     init(date: String, event: String) {
+        // https://developer.apple.com/documentation/foundation/dateformatter
         // read from custom format and create date
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")

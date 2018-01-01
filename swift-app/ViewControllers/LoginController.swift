@@ -11,9 +11,6 @@ class LoginController: UIViewController {
     }
     
     @IBAction func login() {
-        //TODO remove hardcoded entry
-        emailTextField.text = "aaron@wt.be"
-        passwordTextField.text = "testerino"
         // Using firebase authentication
         // Source: https://firebase.google.com/docs/auth/
         

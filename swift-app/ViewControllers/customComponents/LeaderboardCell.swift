@@ -5,5 +5,5 @@ import UIKit
 class LeaderboardCell: UITableViewCell {
     @IBOutlet weak var position: UILabel!
     @IBOutlet weak var score: UILabel!
-    @IBOutlet weak var email: UILabel!
+    @IBOutlet weak var naam: UILabel!
 }

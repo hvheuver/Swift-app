@@ -23,6 +23,9 @@ class LeaderboardTableViewController : UITableViewController{
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "leaderboardCell", for: indexPath) as! LeaderboardCell
+        cell.naam.text = items[indexPath.row].owner
+        cell.position.text = String(indexPath.row+1)
+        cell.score.text = String(items[indexPath.row].score)
         return cell
     }
     

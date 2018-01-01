@@ -75,12 +75,11 @@ class OptionsViewController: UICollectionViewController {
             guard let dict = snapshot.value as? NSDictionary else {
                 return
             }
-            for (_, statisticData) in dict {
+            for (owner, statisticData) in dict {
                 let statistic = Deserializer.deserializeStatistic(dict: (statisticData as! NSDictionary))
                 statistic.finalize()
                 // get the email of the user, username not supported yet
-                let email = Auth.auth().currentUser!.email!
-                statistic.owner = email
+                statistic.owner = (owner as! String)
                 self.leaderboard.append(statistic)
             }
             // got all statistics, time to sort

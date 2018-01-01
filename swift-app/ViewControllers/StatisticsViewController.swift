@@ -62,8 +62,8 @@ class StatisticsViewController: UIViewController {
     
     func initGraph(ref: DatabaseReference){
         // get remote data
-        let userid = Auth.auth().currentUser?.uid
-        ref.child("statistics").child(userid!).observe(DataEventType.value, with: { (snapshot) in
+        let name = UserSupport.getCurrentUser()
+        ref.child("statistics").child(name).observe(DataEventType.value, with: { (snapshot) in
             guard let dict = snapshot.value as? NSDictionary else{
                 return
             }

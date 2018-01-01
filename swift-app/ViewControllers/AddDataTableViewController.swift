@@ -38,9 +38,9 @@ class AddDataTableViewController: UITableViewController {
                 showError("Geen realistisch waarde (>75)")
             } else{
                 // send data
-                let userId = Auth.auth().currentUser?.uid
+                let name = UserSupport.getCurrentUser()
                 let timestamp = Date().ticks
-                self.ref.child("statistics").child(userId!).child(String(timestamp))
+                self.ref.child("statistics").child(name).child(String(timestamp))
                     .setValue([
                         "hoogvogels": hv,
                         "zijvogels": zv,

@@ -24,6 +24,7 @@ class StatisticsViewController: UIViewController {
     func barChartUpdate () {
         let dataSet = BarChartDataSet(values: statistic!.barChartEntries, label: "Aantal vogels")
         dataSet.colors = ChartColorTemplates.pastel()
+        dataSet.valueFont = UIFont(name: "HelveticaNeue-Light", size: 24.0)!
         let data = BarChartData(dataSets: [dataSet])
         barChart.data = data
         barChart.notifyDataSetChanged()
@@ -32,14 +33,23 @@ class StatisticsViewController: UIViewController {
     func barChartSetup(){
         let xAxis:XAxis = barChart.xAxis
         let yAxis:YAxis = barChart.leftAxis
+        let font = UIFont(name: "HelveticaNeue-Light", size: 24.0)!
+        // gridlines
         xAxis.drawAxisLineEnabled = false
         xAxis.drawGridLinesEnabled = false
         yAxis.drawAxisLineEnabled = false
-        yAxis.drawGridLinesEnabled = false
-        barChart.chartDescription?.text = ""
+        // set larger fonts
+        xAxis.labelFont = font
+        yAxis.labelFont = font
+        // disable right yAxis
+        barChart.rightAxis.enabled = false
+        // disabled the tiny legend
+        barChart.legend.enabled = false
+        // add labels
+        barChart.chartDescription?.enabled = false
         let birds = ["", "HV", "ZV", "KV", "KLV"]
-        barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values: birds)
-        barChart.xAxis.granularity = 1
+        xAxis.valueFormatter = IndexAxisValueFormatter(values: birds)
+        xAxis.granularity = 1
     }
     
     @IBAction func unwindFromAddData(_ segue: UIStoryboardSegue) {

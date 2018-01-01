@@ -196,16 +196,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w12-J7-qkU" customClass="BarChartView" customModule="Charts">
-                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <rect key="frame" x="20" y="84" width="335" height="519"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="d6i-8D-d9i" firstAttribute="trailing" secondItem="w12-J7-qkU" secondAttribute="trailing" id="Hdn-NO-1C2"/>
-                            <constraint firstItem="w12-J7-qkU" firstAttribute="top" secondItem="d6i-8D-d9i" secondAttribute="top" id="I3I-iB-ZnN"/>
-                            <constraint firstItem="d6i-8D-d9i" firstAttribute="bottom" secondItem="w12-J7-qkU" secondAttribute="bottom" id="Tdb-1t-QU5"/>
-                            <constraint firstItem="w12-J7-qkU" firstAttribute="leading" secondItem="d6i-8D-d9i" secondAttribute="leading" id="pAl-dQ-Nsg"/>
+                            <constraint firstItem="d6i-8D-d9i" firstAttribute="trailing" secondItem="w12-J7-qkU" secondAttribute="trailing" constant="20" id="Hdn-NO-1C2"/>
+                            <constraint firstItem="w12-J7-qkU" firstAttribute="top" secondItem="d6i-8D-d9i" secondAttribute="top" constant="20" id="I3I-iB-ZnN"/>
+                            <constraint firstItem="d6i-8D-d9i" firstAttribute="bottom" secondItem="w12-J7-qkU" secondAttribute="bottom" constant="20" id="Tdb-1t-QU5"/>
+                            <constraint firstItem="w12-J7-qkU" firstAttribute="leading" secondItem="d6i-8D-d9i" secondAttribute="leading" constant="20" id="pAl-dQ-Nsg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="d6i-8D-d9i"/>
                     </view>
